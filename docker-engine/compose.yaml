@@ -1,0 +1,8 @@
+services:
+  phpfpm:
+    image: php:8.3-fpm
+    environment:
+      - MAX_TRY=40
+    volumes:
+      - ./main.php:/var/www/html/main.php
+    container_name: composeMyPHP
